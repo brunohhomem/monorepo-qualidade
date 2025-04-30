@@ -1,0 +1,9 @@
+# root
+node_modules/
+dist/
+build/
+
+#frontend
+apps/frontend/.next/
+
+#backend
