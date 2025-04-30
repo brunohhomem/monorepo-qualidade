@@ -10,10 +10,14 @@
     "frontend": "npm exec --workspace=frontend",
     "dev:frontend": "npm run frontend -- npm run dev",
     "backend": "npm exec --workspace=backend",
-    "dev:backend": "npm run backend -- npm run dev"
+    "dev:backend": "npm run backend -- npm run dev",
+    "dev": "concurrently -c red,blue -n \"backend\",\"frontend\" \"npm run dev:backend\" \"npm run dev:frontend\""
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "description": ""
+  "description": "",
+  "devDependencies": {
+    "concurrently": "^9.1.2"
+  }
 }
