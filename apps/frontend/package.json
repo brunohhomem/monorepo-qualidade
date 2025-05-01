@@ -3,21 +3,23 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "dev": "next dev"
+    "dev": "next dev",
+    "lint": "eslint  \"./**/*.{jsx,tsx,js,ts}\""
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "description": "",
   "dependencies": {
+    "@brunohhomem/commons-http-client": "*",
     "next": "^15.3.1",
     "react": "^19.1.0",
-    "react-dom": "^19.1.0",
-    "@brunohhomem/commons-http-client": "*"
+    "react-dom": "^19.1.0"
   },
   "devDependencies": {
+    "@brunohhomem/commons-lint": "*",
+    "typescript": "5.8.3",
     "@types/node": "22.15.3",
-    "@types/react": "19.1.2",
-    "typescript": "5.8.3"
+    "@types/react": "19.1.2"
   }
 }

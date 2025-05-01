@@ -4,7 +4,8 @@
   "main": "index.ts",
   "scripts": {
     "start": "tsx watch ./index.ts",
-    "dev": "tsx watch ./index.ts"
+    "dev": "tsx watch ./index.ts",
+    "lint": "eslint  \"./**/*.{jsx,tsx,js,ts}\""
   },
   "keywords": [],
   "author": "",
@@ -14,6 +15,7 @@
     "@brunohhomem/commons-http-client": "*"
   },
   "devDependencies": {
+    "@brunohhomem/commons-lint": "*",
     "@types/node": "^22.15.3",
     "nodemon": "^3.1.10",
     "ts-node": "^10.9.2",

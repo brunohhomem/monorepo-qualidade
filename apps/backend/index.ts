@@ -13,5 +13,3 @@ http
     res.end()
   })
   .listen(4000)
-
-console.log('node js!')

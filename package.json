@@ -13,7 +13,8 @@
     "dev:backend": "npm run backend -- npm run dev",
     "dev": "concurrently -c red,blue -n \"backend\",\"frontend\" \"npm run dev:backend\" \"npm run dev:frontend\"",
     "generator": "npm exec --workspace=@brunohhomem/generator",
-    "gen": "npm run generator -- npm run gen"
+    "gen": "npm run generator -- npm run gen",
+    "lint": "npm run lint --workspaces --if-present"
   },
   "keywords": [],
   "author": "",

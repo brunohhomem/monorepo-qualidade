@@ -34,6 +34,16 @@ function commonPackage(plop: NodePlopAPI) {
           'package.json'
         ),
         templateFile: 'templates/common-package/package.json.hbs'
+      },
+      {
+        type: 'add',
+        path: path.resolve(
+          ROOT,
+          'commons',
+          '{{ lowerCase packageName }}',
+          'eslint.config.mjs'
+        ),
+        templateFile: 'templates/common-package/eslint.config.mjs.hbs'
       }
     ]
   })
