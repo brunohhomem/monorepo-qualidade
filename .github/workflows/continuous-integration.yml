@@ -12,5 +12,5 @@ jobs:
     name: 'Lint'
     runs-on: ubuntu-latest
     steps:
-      - name: 'Olá mundo'
-        run: echo "Olá mundo CI"
+      - name: 'Lint'
+        run: 'npm run lint'
