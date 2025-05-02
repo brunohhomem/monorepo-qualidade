@@ -5,7 +5,7 @@ on:
   pull_request:
     types: [opened, synchronize]
 
-#Quais tarefas?
+#Quais tarefas(jobs)?
 jobs:
   #Tarefa
   lint:
