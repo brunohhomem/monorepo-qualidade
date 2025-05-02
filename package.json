@@ -7,13 +7,16 @@
     "commons/*"
   ],
   "scripts": {
-    "frontend": "npm exec --workspace=frontend",
-    "dev:frontend": "npm run frontend -- npm run dev",
-    "backend": "npm exec --workspace=backend",
-    "dev:backend": "npm run backend -- npm run dev",
+    "front": "npm exec --workspace=frontend",
+    "dev:front": "npm run frontend -- npm run dev",
+    "test:front": "npm run frontend -- npm run test",
+    "back": "npm exec --workspace=backend",
+    "dev:back": "npm run backend -- npm run dev",
+    "test:back": "npm run backend -- npm run test",
     "dev": "concurrently -c red,blue -n \"backend\",\"frontend\" \"npm run dev:backend\" \"npm run dev:frontend\"",
     "generator": "npm exec --workspace=@brunohhomem/generator",
     "gen": "npm run generator -- npm run gen",
+    "test": "npm run test --workspaces --if-present",
     "lint": "npm run lint --workspaces --if-present"
   },
   "keywords": [],
@@ -21,6 +24,7 @@
   "license": "ISC",
   "description": "",
   "devDependencies": {
-    "concurrently": "^9.1.2"
+    "concurrently": "^9.1.2",
+    "ts-node": "^10.9.2"
   }
 }

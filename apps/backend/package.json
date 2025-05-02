@@ -5,6 +5,7 @@
   "scripts": {
     "start": "tsx watch ./index.ts",
     "dev": "tsx watch ./index.ts",
+    "test": "jest",
     "lint": "eslint  \"./**/*.{jsx,tsx,js,ts}\""
   },
   "keywords": [],
@@ -15,6 +16,7 @@
     "@brunohhomem/commons-http-client": "*"
   },
   "devDependencies": {
+    "@brunohhomem/commons-test": "*",
     "@brunohhomem/commons-lint": "*",
     "@types/node": "^22.15.3",
     "nodemon": "^3.1.10",
