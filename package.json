@@ -17,6 +17,7 @@
     "generator": "npm exec --workspace=@brunohhomem/generator",
     "gen": "npm run generator -- npm run gen",
     "test": "npm run test --workspaces --if-present",
+    "test-changed": "npx tsx ./_scripts/run-on-changed-packages.ts \"npm run test\"",
     "lint": "npm run lint --workspaces --if-present"
   },
   "keywords": [],
