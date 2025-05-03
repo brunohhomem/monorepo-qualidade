@@ -1,6 +1,6 @@
 import { message } from './demo'
 
-describe('demo-backend', () => {
+describe('demo-test-backend', () => {
   it('true', () => {
     expect(true).toBe(true)
   })
