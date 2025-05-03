@@ -5,6 +5,10 @@ on:
   pull_request:
     types: [opened, synchronize]
 
+#Variáveis reutilizáveis
+env:
+  NODE_VERSION: 22.15.0
+
 #Quais tarefas(jobs)?
 jobs:
   #Tarefa
@@ -13,10 +17,15 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       # [Common CI/CD Step]
-      - uses: actions/checkout@v3 # Permite acessar os arquivos do projeto corretamente
+      - uses: actions/checkout@v4 # Permite acessar os arquivos do projeto corretamente
+      - uses: actions/setup-node@v4
+        with:
+          node-version: ${{env.NODE_VERSION}}
+          cache: 'npm'
+          cache-dependency-path: ./package-lock.json
       # =============================
       - name: 'Install Dependencies'
-        run: 'npm install'
+        run: 'npm ci --prefer-offline'
       - name: 'Lint'
         run: 'npm run lint'
   #Tarefa
@@ -25,9 +34,14 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       # [Common CI/CD Step]
-      - uses: actions/checkout@v3 # Permite acessar os arquivos do projeto corretamente
+      - uses: actions/checkout@v4 # Permite acessar os arquivos do projeto corretamente
+      - uses: actions/setup-node@v4
+        with:
+          node-version: ${{env.NODE_VERSION}}
+          cache: 'npm'
+          cache-dependency-path: ./package-lock.json
       # =============================
       - name: 'Install Dependencies'
-        run: 'npm install'
+        run: 'npm ci --prefer-offline'
       - name: 'Test'
         run: 'npm run test'
