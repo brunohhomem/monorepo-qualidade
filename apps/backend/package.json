@@ -9,7 +9,7 @@
     "lint": "eslint  \"./**/*.{jsx,tsx,js,ts}\""
   },
   "keywords": [],
-  "author": "",
+  "author": "@brunohhomem",
   "license": "ISC",
   "description": "",
   "dependencies": {
